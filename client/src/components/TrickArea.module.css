@@ -1,0 +1,77 @@
+/* ─── TrickArea 元件樣式 ─── */
+
+.trickContainer {
+  position: relative;
+  width: 280px;
+  height: 220px;
+  margin: 0 auto;
+}
+
+.trickCard {
+  position: absolute;
+  width: 48px;
+  height: 68px;
+  border-radius: var(--radius-md);
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  box-shadow: var(--shadow-md);
+  animation: slideUp 0.3s ease;
+}
+
+.trickCardN {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.trickCardE {
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.trickCardS {
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.trickCardW {
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.suitIcon {
+  font-size: var(--text-base);
+}
+
+.rankText {
+  font-size: var(--text-sm);
+}
+
+.suitBlack {
+  color: #1e293b;
+}
+
+.suitRed {
+  color: #dc2626;
+}
+
+.trickInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.trickScore {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}

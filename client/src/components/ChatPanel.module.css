@@ -1,0 +1,83 @@
+/* ─── ChatPanel 元件樣式 ─── */
+
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 300px;
+}
+
+.chatHeader {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-surface);
+}
+
+.chatMessages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.chatMessage {
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  padding: 2px 0;
+}
+
+.chatSender {
+  font-weight: 600;
+  margin-right: var(--spacing-xs);
+}
+
+.chatContent {
+  color: var(--text-secondary);
+}
+
+.chatInputRow {
+  display: flex;
+  border-top: 1px solid var(--border-color);
+}
+
+.chatInput {
+  flex: 1;
+  border: none;
+  border-radius: 0;
+  background: var(--bg-surface);
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--text-sm);
+}
+
+.chatInput:focus {
+  background: var(--bg-input-focus);
+}
+
+.chatSendBtn {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  background: var(--bg-surface);
+  border: none;
+  border-left: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.chatSendBtn:hover {
+  background: var(--bg-card-hover);
+}
+
+.chatSendBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}

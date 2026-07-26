@@ -1,0 +1,100 @@
+/* ─── BiddingPanel 元件樣式 ─── */
+
+.biddingContainer {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  animation: fadeIn 0.3s ease;
+}
+
+.biddingTitle {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+  color: var(--text-primary);
+}
+
+.bidHistory {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+  min-height: 32px;
+  padding: var(--spacing-sm);
+  background: var(--bg-surface);
+  border-radius: var(--radius-md);
+}
+
+.bidHistoryItem {
+  font-size: var(--text-sm);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card-hover);
+}
+
+.bidHistoryPass {
+  color: var(--text-muted);
+}
+
+.bidGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4px;
+  margin-bottom: var(--spacing-md);
+}
+
+.bidBtn {
+  padding: 6px 4px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.bidBtn:hover:not(:disabled) {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+.bidBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.passBtn {
+  padding: var(--spacing-sm) var(--spacing-lg);
+  font-size: var(--text-base);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  background: var(--border-color);
+  color: var(--text-secondary);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  width: 100%;
+}
+
+.passBtn:hover:not(:disabled) {
+  background: var(--color-warning);
+  color: var(--text-inverse);
+}
+
+.passBtn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.waitingMsg {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+  padding: var(--spacing-md);
+  animation: pulse 2s infinite;
+}

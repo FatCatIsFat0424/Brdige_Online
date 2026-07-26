@@ -1,0 +1,134 @@
+/* ─── LobbyPage 樣式 ─── */
+
+.lobbyContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  background:
+    radial-gradient(ellipse at top, rgba(74, 158, 255, 0.08) 0%, transparent 60%),
+    var(--bg-page);
+}
+
+.lobbyCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  width: 100%;
+  max-width: 480px;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.5s ease;
+}
+
+.lobbyTitle {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.lobbyTitle h1 {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  margin-bottom: var(--spacing-xs);
+  background: linear-gradient(135deg, var(--color-primary), #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lobbyTitle p {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-lg);
+}
+
+.formGroup label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-xs);
+}
+
+.formGroup input {
+  width: 100%;
+}
+
+.colorPicker {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.colorSwatch {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-pill);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.colorSwatch:hover {
+  transform: scale(1.15);
+}
+
+.colorSwatchActive {
+  border-color: white;
+  box-shadow: 0 0 12px currentColor;
+  transform: scale(1.15);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-lg) 0;
+  gap: var(--spacing-md);
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.roomActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.joinRow {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.joinRow input {
+  flex: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: var(--font-mono);
+}
+
+.fullWidthBtn {
+  width: 100%;
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
+.errorMsg {
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+  margin-top: var(--spacing-xs);
+  animation: fadeIn 0.2s ease;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "bridge-online",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Online Bridge PvP card game",
+  "workspaces": [
+    "shared",
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev:server": "cd server && npx tsx watch src/index.ts",
+    "dev:client": "cd client && npm run dev",
+    "build:client": "cd client && npm run build",
+    "test": "cd server && npx vitest run",
+    "test:watch": "cd server && npx vitest",
+    "lint": "eslint \"shared/src/**/*.ts\" \"server/src/**/*.ts\" \"client/src/**/*.{ts,tsx}\"",
+    "typecheck": "npm run typecheck:shared && npm run typecheck:server && npm run typecheck:client",
+    "typecheck:shared": "cd shared && npx tsc --noEmit",
+    "typecheck:server": "cd server && npx tsc --noEmit",
+    "typecheck:client": "cd client && npx tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
